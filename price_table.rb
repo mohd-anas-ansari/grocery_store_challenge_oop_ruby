@@ -1,0 +1,6 @@
+class PriceTable
+
+  List = {}
+  
+
+end
