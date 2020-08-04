@@ -1,14 +1,14 @@
 require_relative "grocery_item"
 
-
-class PriceTable
-
-  List = {
-    :milk => GroceryItem.new("Milk", 10, 5, 2),
-    :banana => GroceryItem.new("Banana", 20),
-    :apple => GroceryItem.new("Apple", 30),
-    :bread => GroceryItem.new("Bread", 40, 20, 3)
-  }
+module PriceTable
   
-
+  List = {
+    :milk => GroceryItem.new("milk", 3.97, 2.50, 2),
+    :banana => GroceryItem.new("banana", 0.99),
+    :apple => GroceryItem.new("apple", 0.89),
+    :bread => GroceryItem.new("bread", 2.17, 2.00, 3)
+  }
 end
+
+
+
