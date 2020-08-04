@@ -3,3 +3,9 @@ class Cart
   def initialize
     @items = []
   end
+  
+    def add_to_cart item
+    @items << item
+  end
+
+end
