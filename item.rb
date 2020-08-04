@@ -1,3 +1,6 @@
+require_relative "price_table"
+
+
 class Item
   attr_accessor :item, :quantity, :price
 
@@ -7,5 +10,7 @@ class Item
     @price = 0
   end
 
+  def calculate_price
 
+  end
 end
