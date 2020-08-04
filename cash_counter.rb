@@ -1,3 +1,6 @@
+require_relative "cart"
+
+
 class Counter
     attr_accessor :counts
 
