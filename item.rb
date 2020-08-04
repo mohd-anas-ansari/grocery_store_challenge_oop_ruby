@@ -1,7 +1,6 @@
 require_relative "price_table"
 
-
-class Item
+class Item 
   attr_accessor :item, :quantity, :price
 
   def initialize (item, quantity)
@@ -10,9 +9,10 @@ class Item
     @price = calculate_price
   end
 
-  def calculate_price
-    grocery_item = PriceTable::List[@item.to_sym]
 
+  def calculate_price 
+    grocery_item = PriceTable::List[@item.to_sym]
+    
     generate_price_after_sale_discount(grocery_item.pack, grocery_item.sale_price, grocery_item.mrp)
   end
 
@@ -28,4 +28,6 @@ class Item
       return price_after_discount
     end
   end
+
+
 end

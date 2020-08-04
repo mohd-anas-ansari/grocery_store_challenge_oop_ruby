@@ -9,9 +9,7 @@ class Bill
     @total_amount = calculate_total_amount items
     @saved_amount = calculate_saved_amount counts
     @table = generate_table items
-
   end
-
 
   def calculate_total_amount items
     sum = 0
@@ -47,3 +45,6 @@ class Bill
     return table
   end
 end
+
+
+
