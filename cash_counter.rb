@@ -1,3 +1,6 @@
+require_relative "cart"
+
+
 class Counter
     attr_accessor :counts
 
@@ -14,6 +17,14 @@ class Counter
 
   def generate_counts list_array
     @counts = list_array.tally
+  end
+
+  def generate_cart 
+    cart = Cart.new 
+    @counts.each do | item, quantity| 
+      cart.add_to_cart (Item.new(item, quantity))
+    end
+    return cart
   end
 
 
