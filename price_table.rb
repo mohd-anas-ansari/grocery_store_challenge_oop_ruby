@@ -1,3 +1,6 @@
+require_relative "grocery_item"
+
+
 class PriceTable
 
   List = {
