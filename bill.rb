@@ -1,5 +1,6 @@
 require_relative "price_table"
 require_relative "cart"
+require "terminal-table"
 
 class Bill
   attr_reader :total_amount, :saved_amount, :table
