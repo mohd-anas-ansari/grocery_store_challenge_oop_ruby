@@ -6,7 +6,7 @@ class Bill
 
   def initialize items, counts
     @total_amount = calculate_total_amount items
-    # @saved_amount = calculate_saved_amount counts
+    @saved_amount = calculate_saved_amount counts
 
   end
 
@@ -18,5 +18,19 @@ class Bill
     end
   
     return sum
+  end
+
+  def calculate_saved_amount counts
+    grocery_item_list = PriceTable::List
+    total_mrp = 0
+
+    counts.each do |item, quantity|
+      grocery_item = grocery_item_list[item.to_sym]
+      total_mrp += grocery_item.mrp * quantity
+    end
+
+    saved_amount = total_mrp - @total_amount
+
+    return saved_amount
   end
 end
