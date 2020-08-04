@@ -7,6 +7,7 @@ class Bill
   def initialize items, counts
     @total_amount = calculate_total_amount items
     @saved_amount = calculate_saved_amount counts
+        @table = generate_table items
 
   end
 
