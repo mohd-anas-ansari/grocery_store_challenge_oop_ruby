@@ -11,6 +11,6 @@ class Item
   end
 
   def calculate_price
-
+    grocery_item = PriceTable::List[@item.to_sym]
   end
 end
